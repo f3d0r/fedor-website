@@ -27,7 +27,7 @@ $(document).ready(function () {
                             contents += ", <strong>" + response['item']['artists'][artistNum].name + "</strong>";
                         }
                     }
-                    contents += ". "
+                    contents += ". ";
                 }
                 contents += "Listen to it <a href=" + response['item'].external_urls.spotify + ">here</a>."
                 $('.listeningto').html(contents);
