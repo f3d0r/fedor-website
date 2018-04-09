@@ -98,45 +98,34 @@ function setup_scrollreveal() {
         sr.reveal('.a-header', header_config, default_delay);
         sr.reveal('.a-footer', footer_config, default_delay);
 
-        // animateName();
+        setTimeout(function () {
+            animateName(firstSteps);
+        }, 4000);
     }
-
 }
 
-// function animateName() {
-//     var first = true;
-//     setInterval(function () {
-//         var currentName = "";
-//         if ($('#name').text() == "") {
-//             if (first) {
-//                 inputText("fedor");
-//             } else {
-//                 inputText("f3d0r");
-//             }
-//         } else {
-//             var clear = setInterval(function () {
-//                 if ($('#name').text().length == 0) {
-//                     first = !first;
-//                     clearInterval(clear);
-//                 } else {
-//                     $('#name').text($('#name').text().substr(0, $('#name').text().length - 1));
-//                 }
-//             }, 100);
-//         }
-//     }, 1500);
-// }
+var firstSteps = ["f3d0r", "f3d r", "f3dor", "f3dor", "f dor", "fedor"];
+var secondSteps = ["fedor", "fed r", "fed0r", "fed0r", "f d0r", "f3d0r"];
 
-// function inputText(currentName) {
-//     var currentChar = 1;
-//     var inputInterval = setInterval(function () {
-//         if ($('#name').text() == currentName) {
-//             clearInterval(inputInterval);
-//         } else {
-//             $('#name').text(currentName.substr(0, currentChar));
-//             currentChar++;
-//         }
-//     }, 125);
-// }
+function animateName(steps) {
+    var currentStep = 0;
+    var interval = setInterval(function () {
+        $('#name').text(steps[currentStep]);
+        currentStep++;
+        if (currentStep == steps.length) {
+            clearInterval(interval);
+            if (steps == firstSteps) {
+                setTimeout(function () {
+                    animateName(secondSteps);
+                }, 2500);
+            } else {
+                setTimeout(function () {
+                    animateName(firstSteps);
+                }, 2500);
+            }
+        }
+    }, 250);
+}
 
 function setup_nivo_lightbox() {
     if ($.isFunction($.fn.nivoLightbox)) {

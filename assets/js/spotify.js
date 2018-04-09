@@ -6,6 +6,7 @@ $(document).ready(function () {
         "url": "https://f3d0r.com/node/getCurrentSong",
         "method": "GET",
         "headers": {
+            "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/x-www-form-urlencoded",
             "Cache-Control": "no-cache",
             "Postman-Token": "7d48eb8b-8f39-4de8-a304-9a852d79e999"
