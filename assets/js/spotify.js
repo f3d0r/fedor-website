@@ -2,7 +2,7 @@ $(document).ready(function () {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://f3d0r.com/node/getCurrentSong",
+        "url": "https://f3d0r.com/node/spotify/getCurrentSong",
         "method": "GET",
         "headers": {
             "Access-Control-Allow-Origin": "*",
