@@ -31,6 +31,8 @@ $(document).ready(function () {
                 }
                 contents += "Listen to it <a href=" + response['item'].external_urls.spotify + ">here</a>."
                 $('.listeningto').html(contents);
+            } else {
+                $('.listeningto').html("");
             }
         });
     }, 2000);
