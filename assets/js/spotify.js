@@ -17,9 +17,9 @@ $(document).ready(function () {
         if (response['is_playing']) {
             var contents = "Right now, I'm listening to <strong>" + response['item'].name + "</strong> by ";
             contents += "<strong>" + response['item']['artists'][0].name + "</strong>";
-            if (response['item'].artists.length == 1) {
+            if (response['item'].artists.length == 2) {
                 contents += " and <strong>" + response['item']['artists'][1].name + "</strong>";
-            } else if (response['item'].artists.length > 1) {
+            } else if (response['item'].artists.length > 2) {
                 for (var artistNum = 1; artistNum < response['item'].artists.length; artistNum++) {
                     if (artistNum == response['item'].artists.length-1) {
                         contents += ", and <strong>" + response['item']['artists'][artistNum].name + "</strong>";    
