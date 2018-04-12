@@ -1,4 +1,8 @@
+var currentlyLightTheme = false;
+
 $(document).ready(function () {
+    themeCheck();
+    setInterval(themeCheck, 2000);
 
     $('html').addClass('js-enabled');
 
@@ -125,6 +129,20 @@ function animateName(steps) {
             }
         }
     }, 250);
+}
+
+var prefix = "assets/css/"
+
+function themeCheck() {
+    var currentHour = new Date().getMinutes();
+    console.log("current hour : " + currentHour);
+    if (currentHour >= 20 || currentHour <= 8 && currentlyLightTheme) {
+        $('.theme').attr('href', prefix + "themes.dark.css");
+        currentlyLightTheme = false;
+    } else if (currentHour < 20 || currentHour > 8 && !currentlyLightTheme) {
+        $('.theme').attr('href', prefix + "themes.light.css");
+        currentlyLightTheme = true;
+    }
 }
 
 function setup_nivo_lightbox() {
