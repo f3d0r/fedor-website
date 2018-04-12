@@ -1,5 +1,3 @@
-var currentlyLightTheme = false;
-
 $(document).ready(function () {
     themeCheck();
     setInterval(themeCheck, 2000);
@@ -133,12 +131,14 @@ function animateName(steps) {
 
 var prefix = "assets/css/"
 
+var currentlyLightTheme = true;
+
 function themeCheck() {
     var currentHour = new Date().getHours();
-    if (currentHour >= 20 || currentHour <= 8 && currentlyLightTheme) {
+    if ((currentHour >= 20 || currentHour <= 8) && currentlyLightTheme) {
         $('.theme').attr('href', prefix + "themes.dark.css");
         currentlyLightTheme = false;
-    } else if (currentHour < 20 || currentHour > 8 && !currentlyLightTheme) {
+    } else if ((currentHour < 20 && currentHour > 8) && !currentlyLightTheme) {
         $('.theme').attr('href', prefix + "themes.light.css");
         currentlyLightTheme = true;
     }
