@@ -134,7 +134,7 @@ function animateName(steps) {
 var prefix = "assets/css/"
 
 function themeCheck() {
-    var currentHour = new Date().getMinutes();
+    var currentHour = new Date().getHours();
     if (currentHour >= 20 || currentHour <= 8 && currentlyLightTheme) {
         $('.theme').attr('href', prefix + "themes.dark.css");
         currentlyLightTheme = false;
