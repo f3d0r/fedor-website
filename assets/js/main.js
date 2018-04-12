@@ -135,7 +135,6 @@ var prefix = "assets/css/"
 
 function themeCheck() {
     var currentHour = new Date().getMinutes();
-    console.log("current hour : " + currentHour);
     if (currentHour >= 20 || currentHour <= 8 && currentlyLightTheme) {
         $('.theme').attr('href', prefix + "themes.dark.css");
         currentlyLightTheme = false;
