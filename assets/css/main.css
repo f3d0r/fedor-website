@@ -6,7 +6,7 @@
  *    without disabling user zoom.
  */
 html {
-  font-family: sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -483,7 +483,7 @@ fieldset,
 figure,
 pre,
 .c-progress-bar {
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.50rem;
 }
 
 html {
@@ -496,8 +496,8 @@ html {
 }
 
 body {
-  font-size: 1rem;
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.1rem;
+  font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.75;
   color: #333;
   background: #fff;
@@ -519,7 +519,7 @@ h3, .c-number,
 h4,
 h5,
 h6 {
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
 }
 
@@ -535,7 +535,7 @@ h6 small {
 
 h2,
 h3, .c-number {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.45;
   text-transform: uppercase;
 }
@@ -661,13 +661,13 @@ img[height] {
 
 @media (min-width: 760px) {
   .o-content {
-    padding-bottom: 1.75rem;
+    padding-bottom: 1.25rem;
   }
 }
 
 @media (min-width: 1200px) {
   .o-content {
-    padding-bottom: 2.7125rem;
+    padding-bottom: 2.0rem;
   }
 }
 
@@ -2258,11 +2258,11 @@ img[height] {
 .c-work__timeframe,
 .c-work__location {
   opacity: .6;
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 .c-work__title {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .c-social-button {
