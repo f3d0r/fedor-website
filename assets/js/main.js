@@ -1,7 +1,6 @@
 $(document).ready(function () {
     themeCheck();
     setInterval(themeCheck, 2000);
-    scrollIfNeeded();
 
     $('html').addClass('js-enabled');
 
@@ -24,10 +23,18 @@ function setup_progress_bar_animation() {
     var $animation_elements = $("[class*='a-']");
     var $window = $(window);
 
+    if (window.location.href == "https://f3d0r.com/#aspace") {
+        $("html, body").animate({
+            scrollTop: $('#aspace').offset().top
+        }, 1000);
+    }
+
     $window.on('scroll resize', function () {
         var window_height = $window.height();
         var window_top_position = $window.scrollTop();
         var window_bottom_position = (window_top_position + window_height);
+        
+
 
         $.each($animation_elements, function () {
             var $element = $(this);
@@ -126,17 +133,6 @@ function animateName(steps) {
             }
         }
     }, 250);
-}
-
-function scrollIfNeeded() {
-    console.log(window.location.href);
-    if (window.location.href == "https://f3d0r.com/#aspace") {
-        console.log("CORRECT URL");
-        $("html, body").animate({
-            scrollTop: $('#aspace').offset().top
-        }, 1000);
-
-    }
 }
 
 var prefix = "assets/css/"
