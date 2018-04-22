@@ -1,6 +1,7 @@
 $(document).ready(function () {
     themeCheck();
     setInterval(themeCheck, 2000);
+    scrollIfNeeded();
 
     $('html').addClass('js-enabled');
 
@@ -50,8 +51,6 @@ function setup_progress_bar_animation() {
             //}
         });
     });
-
-    $window.trigger('scroll');
 }
 
 
@@ -127,6 +126,16 @@ function animateName(steps) {
             }
         }
     }, 250);
+}
+
+function scrollIfNeeded() {
+    if (window.location.href == "file:///Users/fedorparetsky/Google%20Drive/Programming/fedor_website/index.html#aspace") {
+        console.log("CORRECT URL");
+        $("html, body").animate({
+            scrollTop: $('#aspace').offset().top
+        }, 1000);
+
+    }
 }
 
 var prefix = "assets/css/"
