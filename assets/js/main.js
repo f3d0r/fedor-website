@@ -129,7 +129,8 @@ function animateName(steps) {
 }
 
 function scrollIfNeeded() {
-    if (window.location.href == "file:///Users/fedorparetsky/Google%20Drive/Programming/fedor_website/index.html#aspace") {
+    console.log(window.location.href);
+    if (window.location.href == "https://f3d0r.com/#aspace") {
         console.log("CORRECT URL");
         $("html, body").animate({
             scrollTop: $('#aspace').offset().top
