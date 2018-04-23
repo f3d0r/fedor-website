@@ -1,16 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
   <url>
-    <loc>https://f3d0r.com/</loc>
-    <lastmod>2018-04-22</lastmod>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://f3d0r.com/resume.pdf</loc>
-    <lastmod>2018-04-22</lastmod>
-    <changefreq>hourly</changefreq>
+    <loc>https://f3d0r.com</loc> 
   </url>
 </urlset>
-<!--<guid value="00d97232-e44c-4ced-a472-3678546aa12c" />-->
-<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
