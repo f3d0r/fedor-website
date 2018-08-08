@@ -37,20 +37,15 @@
  * @memberOf jQuery
  */
 
-(function (factory)
-{
+(function (factory) {
     'use strict';
 
-    if (typeof define === 'function' && define.amd)
-    {
+    if (typeof define === 'function' && define.amd) {
         define(['jquery'], factory);
-    }
-    else
-    {
+    } else {
         factory(window.jQuery || window.Zepto);
     }
-}(function ($)
-{
+}(function ($) {
     'use strict';
 
     /**
@@ -59,33 +54,33 @@
 
     var pathStack = [],
 
-    /**
-     * Methods.
-     */
+        /**
+         * Methods.
+         */
 
-    methods = {},
+        methods = {},
 
-    /**
-     * Regular expression to check whether the URL has a protocol.
-     *
-     * Is used to check whether the image URL is external.
-     */
+        /**
+         * Regular expression to check whether the URL has a protocol.
+         *
+         * Is used to check whether the image URL is external.
+         */
 
-    regexHasProtocol = /^([a-z]:)?\/\//i,
+        regexHasProtocol = /^([a-z]:)?\/\//i,
 
-    /**
-     * Regular expression that split extensions from the file.
-     *
-     * Is used to inject the DPR suffix to the name.
-     */
+        /**
+         * Regular expression that split extensions from the file.
+         *
+         * Is used to inject the DPR suffix to the name.
+         */
 
-    regexSuffix = /\.\w+$/,
+        regexSuffix = /\.\w+$/,
 
-    /**
-     * Device pixel ratio.
-     */
+        /**
+         * Device pixel ratio.
+         */
 
-    devicePixelRatio;
+        devicePixelRatio;
 
     /**
      * Init is the default method responsible for rendering 
@@ -141,8 +136,7 @@
      * });
      */
 
-    methods.init = function (options)
-    {
+    methods.init = function (options) {
         options = $.extend({
             ping: null,
             dimensions: 'preserve',
@@ -150,12 +144,10 @@
             skipExtensions: ['svg']
         }, options);
 
-        this.each(function ()
-        {
+        this.each(function () {
             var $this = $(this);
 
-            if (!$this.is('img') || $this.hasClass('dense-image'))
-            {
+            if (!$this.is('img') || $this.hasClass('dense-image')) {
                 return;
             }
 
@@ -166,39 +158,30 @@
                 ping = false,
                 updateImage;
 
-            if (!image)
-            {
-                if (!originalImage || devicePixelRatio === 1 || $.inArray(originalImage.split('.').pop().split(/[\?\#]/).shift(), options.skipExtensions) !== -1)
-                {
+            if (!image) {
+                if (!originalImage || devicePixelRatio === 1 || $.inArray(originalImage.split('.').pop().split(/[\?\#]/).shift(), options.skipExtensions) !== -1) {
                     $this.removeClass('dense-image dense-loading');
                     return;
                 }
 
-                image = originalImage.replace(regexSuffix, function (extension)
-                {
+                image = originalImage.replace(regexSuffix, function (extension) {
                     return options.glue + devicePixelRatio + 'x' + extension;
                 });
 
-                ping = options.ping !== false && $.inArray(image, pathStack) === -1 && (options.ping === true || !regexHasProtocol.test(image) || image.indexOf('//'+document.domain) === 0 || image.indexOf(document.location.protocol+'//'+document.domain) === 0);
+                ping = options.ping !== false && $.inArray(image, pathStack) === -1 && (options.ping === true || !regexHasProtocol.test(image) || image.indexOf('//' + document.domain) === 0 || image.indexOf(document.location.protocol + '//' + document.domain) === 0);
             }
 
-            updateImage = function ()
-            {
-                var readyImage = function ()
-                {
+            updateImage = function () {
+                var readyImage = function () {
                     $this.removeClass('dense-loading').addClass('dense-ready').trigger('denseRetinaReady.dense');
                 };
 
                 $this.attr('src', image);
 
-                if (options.dimensions === 'update')
-                {
+                if (options.dimensions === 'update') {
                     $this.dense('updateDimensions').one('denseDimensionChanged', readyImage);
-                }
-                else
-                {
-                    if (options.dimensions === 'remove')
-                    {
+                } else {
+                    if (options.dimensions === 'remove') {
                         $this.removeAttr('width height');
                     }
 
@@ -206,25 +189,20 @@
                 }
             };
 
-            if (ping)
-            {
+            if (ping) {
                 $.ajax({
-                    url  : image,
-                    type : 'HEAD'
-                })
-                    .done(function (data, textStatus, jqXHR)
-                    {
+                        url: image,
+                        type: 'HEAD'
+                    })
+                    .done(function (data, textStatus, jqXHR) {
                         var type = jqXHR.getResponseHeader('Content-type');
 
-                        if (!type || type.indexOf('image/') === 0)
-                        {
+                        if (!type || type.indexOf('image/') === 0) {
                             pathStack.push(image);
                             updateImage();
                         }
                     });
-            }
-            else
-            {
+            } else {
                 updateImage();
             }
         });
@@ -248,19 +226,16 @@
      * var image = $('img').dense('updateDimensions');
      */
 
-    methods.updateDimensions = function ()
-    {
-        return this.each(function ()
-        {
-            var img, $this = $(this), src = $this.attr('src');
+    methods.updateDimensions = function () {
+        return this.each(function () {
+            var img, $this = $(this),
+                src = $this.attr('src');
 
-            if (src)
-            {
+            if (src) {
                 img = new Image();
                 img.src = src;
 
-                $(img).on('load.dense', function ()
-                {
+                $(img).on('load.dense', function () {
                     $this.attr({
                         width: img.width,
                         height: img.height
@@ -281,26 +256,20 @@
      * alert(ratio);
      */
 
-    methods.devicePixelRatio = function ()
-    {
+    methods.devicePixelRatio = function () {
         var pixelRatio = 1;
 
-        if ($.type(window.devicePixelRatio) !== 'undefined')
-        {
+        if ($.type(window.devicePixelRatio) !== 'undefined') {
             pixelRatio = window.devicePixelRatio;
-        }
-        else if ($.type(window.matchMedia) !== 'undefined')
-        {
-            $.each([1.3, 2, 3, 4, 5, 6], function (key, ratio)
-            {
+        } else if ($.type(window.matchMedia) !== 'undefined') {
+            $.each([1.3, 2, 3, 4, 5, 6], function (key, ratio) {
                 var mediaQuery = [
-                    '(-webkit-min-device-pixel-ratio: '+ratio+')',
-                    '(min-resolution: '+Math.floor(ratio*96)+'dpi)',
-                    '(min-resolution: '+ratio+'dppx)'
+                    '(-webkit-min-device-pixel-ratio: ' + ratio + ')',
+                    '(min-resolution: ' + Math.floor(ratio * 96) + 'dpi)',
+                    '(min-resolution: ' + ratio + 'dppx)'
                 ].join(',');
 
-                if (!window.matchMedia(mediaQuery).matches)
-                {
+                if (!window.matchMedia(mediaQuery).matches) {
                     return false;
                 }
 
@@ -326,16 +295,15 @@
      * $('body').css('background-image', 'url(' + image + ')');
      */
 
-    methods.getImageAttribute = function ()
-    {
-        var $this = $(this).eq(0), image = false, url;
+    methods.getImageAttribute = function () {
+        var $this = $(this).eq(0),
+            image = false,
+            url;
 
-        for (var i = 1; i <= devicePixelRatio; i++)
-        {
+        for (var i = 1; i <= devicePixelRatio; i++) {
             url = $this.attr('data-' + i + 'x');
 
-            if (url)
-            {
+            if (url) {
                 image = url;
             }
         }
@@ -357,10 +325,8 @@
      * @memberof jQuery.fn
      */
 
-    $.fn.dense = function (method, options)
-    {
-        if ($.type(method) !== 'string' || $.type(methods[method]) !== 'function')
-        {
+    $.fn.dense = function (method, options) {
+        if ($.type(method) !== 'string' || $.type(methods[method]) !== 'function') {
             options = method;
             method = 'init';
         }
@@ -375,8 +341,7 @@
      * has a <code>dense-retina</code> class.
      */
 
-    $(function ()
-    {
+    $(function () {
         $('body.dense-retina img').dense();
     });
 
