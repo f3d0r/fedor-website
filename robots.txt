@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Allow: /sitemap.xml
+Allow: /resume.pdf
 Sitemap: https://f3d0r.com/sitemap.xml
