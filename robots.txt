@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Allow: /sitemap.htm
+Allow: /sitemap.xml
 Sitemap: https://f3d0r.com/sitemap.xml
