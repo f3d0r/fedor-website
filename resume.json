@@ -1,0 +1,184 @@
+{
+  "selectedTemplate": 5,
+  "headings": {
+    "skills": "",
+    "projects": "",
+    "awards": "",
+    "education": "Education"
+  },
+  "basics": {
+    "name": "Fedor Paretsky",
+    "email": "me@f3d0r.com",
+    "phone": "(206) 372-8476",
+    "website": "f3d0r.com",
+    "location": {
+      "address": "Seattle, Wa"
+    }
+  },
+  "education": [
+    {
+      "institution": "University of Washington",
+      "area": "Applied Physics (Technical) and Mathematics",
+      "studyType": "BS",
+      "endDate": "Jun. 2020",
+      "gpa": "3.6",
+      "location": "Seattle, WA",
+      "startDate": "Sep. 2016"
+    },
+    {
+      "institution": "Garfield High School",
+      "location": "Seattle, WA",
+      "studyType": "High School Degree",
+      "gpa": "3.7",
+      "startDate": "Sep. 2012",
+      "endDate": "Jun. 2016"
+    }
+  ],
+  "work": [
+    {
+      "location": "Seattle, WA",
+      "website": "",
+      "startDate": "Oct. 2015",
+      "endDate": "Present",
+      "highlights": [
+        "Building an app/sensor infra. that uses live data to connect commuters to cheap, remote parking spots, using last-mile transit to get to destination.",
+        "Y Combinator 2018 Startup School (YC SS18)"
+      ],
+      "company": "aspace, Inc.",
+      "position": "Co-Founder/CEO"
+    },
+    {
+      "highlights": [
+        "A StudentRND Code Evangelist® goes out into the world to spread a love of code with StudentRND, a non-profit getting students excited and involved in Computer Science. Code Evangelists are Day-Of coordinators, assisting with various event logistics at it's events and by MCing and individually interacting with students during SRND's events, like CodeDay.",
+        ""
+      ],
+      "position": "Code Evangelist®",
+      "company": "srnd.org (StudentRND)",
+      "location": "U.S.A.",
+      "startDate": "May 2016",
+      "endDate": "Present"
+    },
+    {
+      "highlights": [
+        "Resident Advisors (RAs) work in the University of Washington residence halls to establish a cohesive and responsible community in their designated area, model and support issues related to diversity, facilitate the holistic development of residents through programming, promote resident involvement, and refer, advise, and support residents as they deal with academic and personal issues.",
+        ""
+      ],
+      "position": "Resident Advisor (RA)",
+      "company": "University of Washington Housing & Food Services",
+      "location": "Seattle, WA",
+      "startDate": "Sep. 2017",
+      "endDate": "Mar. 2018"
+    },
+    {
+      "highlights": [
+        "Manage and maintain hacker space",
+        "Repaired and refurbished professional/industrial-grade machinery",
+        "Assisted with completion of customer orders"
+      ],
+      "position": "Lead Intern",
+      "company": "Metrix:Create Space",
+      "location": "Seattle, WA",
+      "startDate": "Feb. 2016",
+      "endDate": "Sep. 2016"
+    },
+    {
+      "highlights": [
+        ""
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "level": "",
+      "keywords": [
+        "Java",
+        "Kotlin",
+        "Python",
+        "JavaScript",
+        "node.js",
+        "Arduino",
+        "Lua",
+        "Swift"
+      ],
+      "name": "Programming Languages"
+    },
+    {
+      "keywords": [
+        "Nginx",
+        "Apache",
+        "Express",
+        "web.py"
+      ],
+      "name": "Web Frameworks"
+    },
+    {
+      "keywords": [
+        "MySQL",
+        "NoSQL",
+        "Realm",
+        "Firebase"
+      ],
+      "name": "Databases"
+    }
+  ],
+  "projects": [
+    {
+      "name": "aspace",
+      "url": "https://trya.space",
+      "keywords": [
+        "Java",
+        "Kotlin",
+        "Python",
+        "JavaScript",
+        "node.js",
+        "Arduino",
+        "Lua",
+        "Swift"
+      ],
+      "description": "My startup code base, please enquire in-person or by email for more information."
+    },
+    {
+      "keywords": [
+        "Xcode",
+        "RESTful APIs"
+      ],
+      "name": "HQ Trivia Bot",
+      "description": "HQ Trivia Bot (not to be used on live games) - PRIVATE repository, please contact for access.",
+      "url": "https://github.com/f3d0r"
+    }
+  ],
+  "awards": [
+    {
+      "date": "June 2016",
+      "summary": "Awarded to 3 students annually in graduating class.",
+      "title": "Garfield High School Certificate of Excellence in Business Technology and Computer Science",
+      "awarder": "Garfield High School Career and Technology Education (CTE) Department"
+    },
+    {
+      "title": "Washington State Honors Award",
+      "date": "June 2016",
+      "awarder": "Randy Dorn - State Superintendent of Public Instruction"
+    },
+    {
+      "title": "Outstanding Soloist - Honorable Mention",
+      "awarder": "Wynton Marsalis",
+      "date": "May 2016",
+      "summary": "Awarded at the 2016 International Essentially Ellington Jazz Band Competition."
+    },
+    {
+      "title": "Outstanding Soloist",
+      "date": "May 2015",
+      "awarder": "Wynton Marsalis",
+      "summary": "Awarded at the 2015 International Essentially Ellington Jazz Band Competition."
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "education",
+    "work",
+    "skills",
+    "projects",
+    "awards"
+  ]
+}
