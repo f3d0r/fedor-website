@@ -1,4 +1,4 @@
-var birthday = new Date(1997, 11, 12, 6, 15, 0, 0);
+var birthday = new Date(1997, 10, 11, 6, 15, 0, 0);
 
 $(document).ready(function () {
     setInterval(calculateDecimalYear, 75);
