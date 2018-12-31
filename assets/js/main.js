@@ -33,7 +33,7 @@ function setup_progress_bar_animation() {
         var window_height = $window.height();
         var window_top_position = $window.scrollTop();
         var window_bottom_position = (window_top_position + window_height);
-        
+
 
 
         $.each($animation_elements, function () {
@@ -135,7 +135,7 @@ function animateName(steps) {
     }, 250);
 }
 
-var prefix = "assets/css/"
+var prefix = "assets/css/";
 
 var currentlyLightTheme = true;
 
