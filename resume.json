@@ -120,7 +120,7 @@
     ],
     "projects": [{
             "name": "aspace",
-            "url": "https://trya.space",
+            "url": "https://trya.space/",
             "keywords": [
                 "Java",
                 "Kotlin",
@@ -140,7 +140,7 @@
             ],
             "name": "HQ Trivia Bot",
             "description": "HQ Trivia Bot (not to be used on live games) - PRIVATE repository, please contact for access.",
-            "url": "https://github.com/f3d0r"
+            "url": "https://github.com/f3d0r/"
         }
     ],
     "awards": [{
