@@ -23,7 +23,7 @@ function setup_progress_bar_animation() {
     var $animation_elements = $("[class*='a-']");
     var $window = $(window);
 
-    if (window.location.href == "https://f3d0r.com/#aspace") {
+    if (window.location.href == "https://f3d0r.com/#aspace/") {
         $("html, body").animate({
             scrollTop: $('#aspace').offset().top
         }, 1000);
