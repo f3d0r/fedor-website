@@ -1,138 +1,135 @@
-$(document).ready(function () {
-    themeCheck();
-    setInterval(themeCheck, 2000);
+$(document).ready(function() {
+  themeCheck();
+  setInterval(themeCheck, 2000);
 
-    $('html').addClass('js-enabled');
+  $("html").addClass("js-enabled");
 
-    setup_nivo_lightbox();
-    setup_dense();
+  setup_nivo_lightbox();
+  setup_dense();
 
-    $(window).load(function () {
-        $(".js-preloader").fadeOut(800, function () {
-            $(".js-main-container").fadeIn(800);
+  $(window).load(function() {
+    $(".js-preloader").fadeOut(800, function() {
+      $(".js-main-container").fadeIn(800);
 
-            setup_scrollreveal();
-            setup_progress_bar_animation();
-        });
+      setup_scrollreveal();
+      setup_progress_bar_animation();
     });
+  });
 });
 
-
-
 function setup_progress_bar_animation() {
-    var $animation_elements = $("[class*='a-']");
-    var $window = $(window);
+  var $animation_elements = $("[class*='a-']");
+  var $window = $(window);
 
-    if (window.location.href == "https://f3d0r.com/#aspace/") {
-        $("html, body").animate({
-            scrollTop: $('#aspace').offset().top
-        }, 1000);
-    }
+  if (window.location.href.indexOf("#") != -1) {
+    var url = window.location.href;
+    var animateToId = url.substring(url.indexOf("#"), url.length);
+    try {
+      $("html, body").animate(
+        {
+          scrollTop: $(animateToId).offset().top
+        },
+        1000
+      );
+    } catch (e) {}
+  }
 
-    $window.on('scroll resize', function () {
-        var window_height = $window.height();
-        var window_top_position = $window.scrollTop();
-        var window_bottom_position = (window_top_position + window_height);
+  $window.on("scroll resize", function() {
+    var window_height = $window.height();
+    var window_top_position = $window.scrollTop();
+    var window_bottom_position = window_top_position + window_height;
 
+    $.each($animation_elements, function() {
+      var $element = $(this);
+      var element_height = $element.outerHeight();
+      var element_top_position = $element.offset().top;
+      var element_bottom_position = element_top_position + element_height;
 
+      // Check to see if this current container is within viewport
+      if (
+        element_bottom_position >= window_top_position &&
+        element_top_position <= window_bottom_position
+      ) {
+        $element.addClass("in-view");
 
-        $.each($animation_elements, function () {
-            var $element = $(this);
-            var element_height = $element.outerHeight();
-            var element_top_position = $element.offset().top;
-            var element_bottom_position = (element_top_position + element_height);
-
-            // Check to see if this current container is within viewport
-            if ((element_bottom_position >= window_top_position) &&
-                (element_top_position <= window_bottom_position)) {
-                $element.addClass('in-view');
-
-                // Animate progress bar
-                if ($element.hasClass('a-progress-bar')) {
-                    $element.css('width', $element.attr('data-percent') + '%');
-                }
-
-            }
-            //else {
-            //    $element.removeClass('in-view');
-            //}
-        });
+        // Animate progress bar
+        if ($element.hasClass("a-progress-bar")) {
+          $element.css("width", $element.attr("data-percent") + "%");
+        }
+      }
+      //else {
+      //    $element.removeClass('in-view');
+      //}
     });
+  });
 }
-
-
 
 function setup_dense() {
-    if ($.isFunction($.fn.dense)) {
-
-        $('img').dense({
-            'glue': '@'
-        });
-
-    }
+  if ($.isFunction($.fn.dense)) {
+    $("img").dense({
+      glue: "@"
+    });
+  }
 }
 
-
-
 function setup_scrollreveal() {
-    if (typeof ScrollReveal !== 'undefined' && $.isFunction(ScrollReveal)) {
+  if (typeof ScrollReveal !== "undefined" && $.isFunction(ScrollReveal)) {
+    window.sr = ScrollReveal();
 
-        window.sr = ScrollReveal();
+    var default_config = {
+      duration: 500,
+      delay: 0,
+      easing: "ease",
+      scale: 1,
+      mobile: false
+    };
+    var header_config = $.extend(false, default_config, {
+      duration: 1200,
+      delay: 700
+    });
+    var footer_config = $.extend(false, default_config, {
+      duration: 1500,
+      distance: 0,
+      viewOffset: {
+        top: 0,
+        right: 0,
+        bottom: 100,
+        left: 0
+      }
+    });
 
-        var default_config = {
-            duration: 500,
-            delay: 0,
-            easing: 'ease',
-            scale: 1,
-            mobile: false
-        };
-        var header_config = $.extend(false, default_config, {
-            duration: 1200,
-            delay: 700
-        });
-        var footer_config = $.extend(false, default_config, {
-            duration: 1500,
-            distance: 0,
-            viewOffset: {
-                top: 0,
-                right: 0,
-                bottom: 100,
-                left: 0
-            }
-        });
+    var default_delay = 175;
 
-        var default_delay = 175;
+    sr.reveal(".a-header", header_config, default_delay);
+    sr.reveal(".a-footer", footer_config, default_delay);
 
-        sr.reveal('.a-header', header_config, default_delay);
-        sr.reveal('.a-footer', footer_config, default_delay);
-
-        setTimeout(function () {
-            animateName(firstSteps);
-        }, 4000);
-    }
+    setTimeout(function() {
+      animateName(firstSteps);
+    }, 4000);
+  }
 }
 
 var firstSteps = ["f3d0r", "f3d r", "f3dor", "f3dor", "f dor", "fedor"];
 var secondSteps = ["fedor", "fed r", "fed0r", "fed0r", "f d0r", "f3d0r"];
 
 function animateName(steps) {
-    var currentStep = 0;
-    var interval = setInterval(function () {
-        $('#name').text(steps[currentStep]);
-        currentStep++;
-        if (currentStep == steps.length) {
-            clearInterval(interval);
-            if (steps == firstSteps) {
-                setTimeout(function () {
-                    animateName(secondSteps);
-                }, 2500);
-            } else {
-                setTimeout(function () {
-                    animateName(firstSteps);
-                }, 2500);
-            }
-        }
-    }, 250);
+  var currentStep = 0;
+  var interval = setInterval(function() {
+    $("#name").text(steps[currentStep]);
+    currentStep++;
+    if (currentStep == steps.length) {
+      clearInterval(interval);
+      if (steps == firstSteps) {
+        setTimeout(function() {
+          animateName(secondSteps);
+        }, 2500);
+      } else {
+        setTimeout(function() {
+          animateName(firstSteps);
+        }, 2500);
+      }
+    }
+  }, 250);
 }
 
 var prefix = "assets/css/";
@@ -140,53 +137,53 @@ var prefix = "assets/css/";
 var currentlyLightTheme = true;
 
 function themeCheck() {
-    var currentHour = new Date().getHours();
-    if ((currentHour >= 20 || currentHour <= 8) && currentlyLightTheme) {
-        $('.theme').attr('href', prefix + "themes.dark.css");
-        currentlyLightTheme = false;
-    } else if ((currentHour < 20 && currentHour > 8) && !currentlyLightTheme) {
-        $('.theme').attr('href', prefix + "themes.light.css");
-        currentlyLightTheme = true;
-    }
+  var currentHour = new Date().getHours();
+  if ((currentHour >= 20 || currentHour <= 8) && currentlyLightTheme) {
+    $(".theme").attr("href", prefix + "themes.dark.css");
+    currentlyLightTheme = false;
+  } else if (currentHour < 20 && currentHour > 8 && !currentlyLightTheme) {
+    $(".theme").attr("href", prefix + "themes.light.css");
+    currentlyLightTheme = true;
+  }
 }
 
 function setup_nivo_lightbox() {
-    if ($.isFunction($.fn.nivoLightbox)) {
-        var $selector = $('.js-lightbox');
+  if ($.isFunction($.fn.nivoLightbox)) {
+    var $selector = $(".js-lightbox");
 
-        // Hide all titles to prevent tooltip from showing
-        $selector.each(function () {
-            var title = $(this).attr('title');
-            $(this).attr('data-title', title);
-            $(this).attr('title', '');
-        });
+    // Hide all titles to prevent tooltip from showing
+    $selector.each(function() {
+      var title = $(this).attr("title");
+      $(this).attr("data-title", title);
+      $(this).attr("title", "");
+    });
 
-        // On click, add titles back, so lightbox can display them
-        $selector.click(function () {
-            $selector.each(function () {
-                var title = $(this).attr('data-title');
-                $(this).attr('title', title);
-            });
-        });
+    // On click, add titles back, so lightbox can display them
+    $selector.click(function() {
+      $selector.each(function() {
+        var title = $(this).attr("data-title");
+        $(this).attr("title", title);
+      });
+    });
 
-        $selector.nivoLightbox({
-            effect: 'fade', // The effect to use when showing the lightbox
-            theme: 'default', // The lightbox theme to use
-            keyboardNav: true, // Enable/Disable keyboard navigation (left/right/escape)
-            clickOverlayToClose: true, // If false clicking the "close" button will be the only way to close the lightbox
-            onInit: function () {}, // Callback when lightbox has loaded
-            beforeShowLightbox: function () {}, // Callback before the lightbox is shown
-            afterShowLightbox: function (lightbox) {}, // Callback after the lightbox is shown
-            beforeHideLightbox: function () {}, // Callback before the lightbox is hidden
-            //afterHideLightbox: function(){},              // Callback after the lightbox is hidden
-            onPrev: function (element) {}, // Callback when the lightbox gallery goes to previous item
-            onNext: function (element) {}, // Callback when the lightbox gallery goes to next item
-            afterHideLightbox: function () {
-                // Remove title to prevent tooltip from showing
-                $selector.attr('title', '');
-            },
-            errorMessage: 'The requested content cannot be loaded. Please try again later.' // Error message when content can't be loaded
-        });
-
-    }
+    $selector.nivoLightbox({
+      effect: "fade", // The effect to use when showing the lightbox
+      theme: "default", // The lightbox theme to use
+      keyboardNav: true, // Enable/Disable keyboard navigation (left/right/escape)
+      clickOverlayToClose: true, // If false clicking the "close" button will be the only way to close the lightbox
+      onInit: function() {}, // Callback when lightbox has loaded
+      beforeShowLightbox: function() {}, // Callback before the lightbox is shown
+      afterShowLightbox: function(lightbox) {}, // Callback after the lightbox is shown
+      beforeHideLightbox: function() {}, // Callback before the lightbox is hidden
+      //afterHideLightbox: function(){},              // Callback after the lightbox is hidden
+      onPrev: function(element) {}, // Callback when the lightbox gallery goes to previous item
+      onNext: function(element) {}, // Callback when the lightbox gallery goes to next item
+      afterHideLightbox: function() {
+        // Remove title to prevent tooltip from showing
+        $selector.attr("title", "");
+      },
+      errorMessage:
+        "The requested content cannot be loaded. Please try again later." // Error message when content can't be loaded
+    });
+  }
 }
