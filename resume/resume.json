@@ -1,5 +1,5 @@
 {
-  "selectedTemplate": 5,
+  "selectedTemplate": 4,
   "headings": {
     "skills": "",
     "projects": "",
@@ -34,15 +34,14 @@
   ],
   "work": [
     {
-      "location": "Seattle, WA - https://trya.space",
+      "location": "trya.space - Seattle, WA",
       "website": "",
       "startDate": "May 2018",
       "endDate": "Nov. 2018",
       "highlights": [
-        "Building an app/sensor infra. that uses live data to connect commuters to cheap, remote parking spots, using last-mile transit to get to destination.",
-        "Created infrastructures for Machine-learning parking behavior, optimizing routes with parking vacancy variables, creating hardware sensors for detecting parking spot vacancy, built Android and iOS apps, and accompanying backend",
-        "Y Combinator 2018 Startup School (YC SS18)",
-        "Y Combinator W19 Interview",
+        "Built an app/sensor infra. that uses live data to connect commuters to cheap, remote parking spots, using last-mile transit to get to destination.",
+        "Created infrastructures for Machine-learning parking behavior, optimized routes with parking vacancy variables, created hardware sensors for detecting parking spot vacancy, built Android and iOS apps, and accompanying backend",
+        "Y Combinator W19 Interview Y Combinator 2018 Startup School (YC SS18)",
         "Technologies used: node.js, Java, Swift, Lua, Arduino, Python, and HTML/CSS"
       ],
       "company": "aspace, Inc.",
@@ -50,12 +49,11 @@
     },
     {
       "highlights": [
-        "A StudentRND Code Evangelist® goes out into the world to spread a love of code with StudentRND, a non-profit getting students excited and involved in CS. Code Evangelists are day-of coordinators, assisting with various event logistics.",
-        null
+        "A StudentRND Code Evangelist® goes out into the world to spread a love of code with StudentRND, a non-profit getting students excited and involved in CS. Code Evangelists are day-of coordinators, assisting with various event logistics."
       ],
       "position": "Code Evangelist®",
       "company": "srnd.org (StudentRND)",
-      "location": "U.S.A.",
+      "location": "srnd.org - U.S.A.",
       "startDate": "May 2016",
       "endDate": "Present"
     },
@@ -71,14 +69,12 @@
     },
     {
       "highlights": [
-        "Manage and maintain hacker space",
-        "Repaired and refurbished professional/industrial-grade machinery",
-        "Assisted with completion of customer orders",
+        "Maintained hacker space and repaired/refurbished professional/industrial-grade machinery",
         "Technologies used: Large- and small-scale 3D printers, industrial laser cutters and PCB printers, CNCs"
       ],
       "position": "Lead Intern",
       "company": "Metrix:Create Space",
-      "location": "Seattle, WA",
+      "location": "metrixcreatespace.com - Seattle, WA",
       "startDate": "Feb. 2016",
       "endDate": "Sep. 2016"
     },
@@ -138,12 +134,9 @@
   ],
   "projects": [
     {
-      "name": "aspace",
-      "url": "https://trya.space/",
       "keywords": [
         null
-      ],
-      "description": "See experience section."
+      ]
     },
     {
       "keywords": [
@@ -157,7 +150,7 @@
     },
     {
       "keywords": [
-        "Xcode",
+        "Swift",
         "RESTful APIs"
       ],
       "name": "HQ Trivia Bot",
@@ -166,9 +159,9 @@
     },
     {
       "keywords": [
-        "HTML/CSS/JavaScript",
+        "HTML/CSS/JS",
         "node.js",
-        "Google Cloud Platform Natural Language"
+        "Google Cloud Natural Language"
       ],
       "name": "PrivaC",
       "description": "A Chrome extension that highlights important parts of a Terms of Service page using NLP.",
@@ -176,24 +169,23 @@
     },
     {
       "keywords": [
-        "HTML/CSS/JavaScript",
+        "HTML/CSS/JS",
         "Python/Keras",
         "node.js"
       ],
-      "name": "Deep Learning Visual Playground",
+      "name": "Deep Learning Playground",
       "description": "A Scratch-like interface for creating Keras applications.",
-      "url": "https://devpost.com/software/deep-learning-visual-playground/"
+      "url": "http://bit.ly/dlplayground"
     }
   ],
   "awards": [
     {
       "date": "June 2016",
-      "summary": "Awarded to 3 students annually in graduating class.",
-      "title": "Garfield High School Certificate of Excellence in Business Technology and Computer Science",
-      "awarder": "Garfield High School Career and Technology Education (CTE) Department"
+      "title": "Garfield HS Certificate of Excellence in Business Technology and CS",
+      "awarder": "Garfield HS Career and Technology Education Department"
     },
     {
-      "title": "Washington State Honors Award",
+      "title": "WA State Honors Award",
       "date": "June 2016",
       "awarder": "Randy Dorn - State Superintendent of Public Instruction"
     },

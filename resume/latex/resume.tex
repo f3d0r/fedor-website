@@ -1,61 +1,169 @@
-\documentclass[line,margin]{res}
-    \usepackage[none]{hyphenat}
-    \usepackage{textcomp}
-    \usepackage[utf8]{inputenc}
-    \usepackage[T1]{fontenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a modified ONE COLUMN version of
+% the following template:
+%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \documentclass[]{deedy-resume-openfont}
+
     \begin{document}
-\name{{\LARGE Fedor Paretsky}}
-\address{me@f3d0r.com | (206) 372-8476 | Seattle, WA | f3d0r.com}
-\begin{resume}
-	\vspace{-5mm}
-	        
-	
-	\section{Education}
-	\textbf{University of Washington}, {\sl BS in Applied Physics and Mathematics} \hfill Sep. 2016 | Jun. 2020\\Seattle, WA\\\\
-	\textbf{Garfield High School}, {\sl High School Degree} \hfill Sep. 2012 | Jun. 2016\\Seattle, WA
-	\section{EXPERIENCE}
-	\textbf{aspace, Inc.}, {\sl Co-Founder/CEO}\hfill May 2018 | Nov. 2018\\Seattle, WA - https://trya.space\\\begin{itemize} \itemsep 3pt
-	\item Building an app/sensor infra. that uses live data to connect commuters to cheap, remote parking spots, using last-mile transit to get to destination.
-	\item Created infrastructures for Machine-learning parking behavior, optimizing routes with parking vacancy variables, creating hardware sensors for detecting parking spot vacancy, built Android and iOS apps, and accompanying backend
-	\item Y Combinator 2018 Startup School (YC SS18)
-	\item Y Combinator W19 Interview
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Profile
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Fedor}{Paretsky}{me@f3d0r.com | (206) 372-8476 | Seattle, WA | f3d0r.com}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Education
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+\raggedright
+
+\runsubsection{University of Washington}\descript{| BS Applied Physics and Mathematics}\hfill \location{Seattle, WA | Sep. 2016 - Jun. 2020}\\
+    
+\sectionsep
+  
+
+\runsubsection{Garfield High School}\descript{| High School Degree}\hfill \location{Seattle, WA | Sep. 2012 - Jun. 2016}\\
+    
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Experience
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experience}
+\runsubsection{aspace, Inc.}\descript{| Co-Founder/CEO}\hfill \location{trya.space - Seattle, WA | May 2018 – Nov. 2018}
+\begin{tightemize}
+	\item Built an app/sensor infra. that uses live data to connect commuters to cheap, remote parking spots, using last-mile transit to get to destination.
+	\item Created infrastructures for Machine-learning parking behavior, optimized routes with parking vacancy variables, created hardware sensors for detecting parking spot vacancy, built Android and iOS apps, and accompanying backend
+	\item Y Combinator W19 Interview Y Combinator 2018 Startup School (YC SS18)
 	\item Technologies used: node.js, Java, Swift, Lua, Arduino, Python, and HTML/CSS
-	\end{itemize}
-	\textbf{srnd.org (StudentRND)}, {\sl Code Evangelist®}\hfill May 2016 | Present\\U.S.A.\\\begin{itemize} \itemsep 3pt
+\end{tightemize}
+\sectionsep
+\runsubsection{srnd.org (StudentRND)}\descript{| Code Evangelist®}\hfill \location{srnd.org - U.S.A. | May 2016 – Present}
+\begin{tightemize}
 	\item A StudentRND Code Evangelist® goes out into the world to spread a love of code with StudentRND, a non-profit getting students excited and involved in CS. Code Evangelists are day-of coordinators, assisting with various event logistics.
-	\end{itemize}
-	\textbf{University of Washington Housing \& Food Services}, {\sl Resident Advisor (RA)}\hfill Sep. 2017 | Mar. 2018\\Seattle, WA\\\begin{itemize} \itemsep 3pt
+\end{tightemize}
+\sectionsep
+\runsubsection{University of Washington Housing \& Food Services}\descript{| Resident Advisor (RA)}\hfill \location{Seattle, WA | Sep. 2017 – Mar. 2018}
+\begin{tightemize}
 	\item Resident Advisors (RAs) work in the UW residence halls to establish a cohesive and responsible community in their designated area, model and support issues related to diversity, and refer, advise, and support residents.
-	\end{itemize}
-	\textbf{Metrix:Create Space}, {\sl Lead Intern}\hfill Feb. 2016 | Sep. 2016\\Seattle, WA\\\begin{itemize} \itemsep 3pt
-	\item Manage and maintain hacker space
-	\item Repaired and refurbished professional/industrial-grade machinery
-	\item Assisted with completion of customer orders
+\end{tightemize}
+\sectionsep
+\runsubsection{Metrix:Create Space}\descript{| Lead Intern}\hfill \location{metrixcreatespace.com - Seattle, WA | Feb. 2016 – Sep. 2016}
+\begin{tightemize}
+	\item Maintained hacker space and repaired/refurbished professional/industrial-grade machinery
 	\item Technologies used: Large- and small-scale 3D printers, industrial laser cutters and PCB printers, CNCs
-	\end{itemize}
-	\section{SKILLS}
-	\begin{tabular}{@{}ll}
-		\textbf{Programming Languages}:     & Java, Python, JavaScript, HTML/CSS, node.js, Arduino, Lua \\
-		\textbf{Web Frameworks}:            & Nginx, Apache, Express, web.py                            \\
-		\textbf{Databases}:                 & MySQL, NoSQL, Realm, Firebase                             \\
-		\textbf{Cloud Computing Platforms}: & DigitalOcean, Amazon Web Services, Google Cloud Platform  \\
-		\textbf{Mobile Development}:        & Android (Java), iOS (Swift)                               \\
-	\end{tabular}
-	\section{PROJECTS}
-	\textbf{aspace}, {\sl }\\ See experience section.\\ https://trya.space/\\\\
-	\textbf{ssh.uno}, {\sl node.js (Electron.js), HTML/CSS/JavaScript, SH}\\ The fastest, simplest, most intuitive command-line experience yet.\\ https://ssh.uno\\\\
-	\textbf{HQ Trivia Bot}, {\sl Xcode, RESTful APIs}\\ A HQ Trivia Bot, for educational purposes only.\\ https://github.com/f3d0r/triviabot\\\\
-	\textbf{PrivaC}, {\sl HTML/CSS/JavaScript, node.js, Google Cloud Platform Natural Language}\\ A Chrome extension that highlights important parts of a Terms of Service page using NLP.\\ http://bit.ly/privacextension\\\\
-	\textbf{Deep Learning Visual Playground}, {\sl HTML/CSS/JavaScript, Python/Keras, node.js}\\ A Scratch-like interface for creating Keras applications.\\ https://devpost.com/software/deep-learning-visual-playground/\\\\
-	\section{AWARDS}
-	\textbf{Garfield High School Certificate of Excellence in Business Technology and Computer Science}, {\sl Garfield High School Career and Technology Education (CTE) Department} \hfill June 2016 \\
-	Awarded to 3 students annually in graduating class. \\\\
-	\textbf{Washington State Honors Award}, {\sl Randy Dorn - State Superintendent of Public Instruction} \hfill June 2016 \\
-	\\\\
-	\textbf{Outstanding Soloist - Honorable Mention}, {\sl Wynton Marsalis} \hfill May 2016 \\
-	Awarded at the 2016 International Essentially Ellington Jazz Band Competition. \\\\
-	\textbf{Outstanding Soloist}, {\sl Wynton Marsalis} \hfill May 2015 \\
-	Awarded at the 2015 International Essentially Ellington Jazz Band Competition. \\\\
-	\ 
-\end{resume}
+\end{tightemize}
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Skills
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Skills}
+\raggedright
+\begin{tabular}{ l l }
+	\descript{Programming Languages}     & {\location{Java, Python, JavaScript, HTML/CSS, node.js, Arduino, Lua}} \\
+	\descript{Web Frameworks}            & {\location{Nginx, Apache, Express, web.py}}                            \\
+	\descript{Databases}                 & {\location{MySQL, NoSQL, Realm, Firebase}}                             \\
+	\descript{Cloud Computing Platforms} & {\location{DigitalOcean, Amazon Web Services, Google Cloud Platform}}  \\
+	\descript{Mobile Development}        & {\location{Android (Java), iOS (Swift)}}                               \\
+\end{tabular}
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Projects
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Projects}
+\raggedright
+
+\runsubsection{\large{ssh.uno}}
+\descript{| node.js (Electron.js), HTML/CSS/JavaScript, SH}\hfill \location{https://ssh.uno}\\
+The fastest, simplest, most intuitive command-line experience yet.\\
+\sectionsep
+  
+
+\runsubsection{\large{HQ Trivia Bot}}
+\descript{| Swift, RESTful APIs}\hfill \location{https://github.com/f3d0r/triviabot}\\
+A HQ Trivia Bot, for educational purposes only.\\
+\sectionsep
+  
+
+\runsubsection{\large{PrivaC}}
+\descript{| HTML/CSS/JS, node.js, Google Cloud Natural Language}\hfill \location{http://bit.ly/privacextension}\\
+A Chrome extension that highlights important parts of a Terms of Service page using NLP.\\
+\sectionsep
+  
+
+\runsubsection{\large{Deep Learning Playground}}
+\descript{| HTML/CSS/JS, Python/Keras, node.js}\hfill \location{http://bit.ly/dlplayground}\\
+A Scratch-like interface for creating Keras applications.\\
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Awards
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Awards}
+\runsubsection{\large{Garfield HS Certificate of Excellence in Business Technology and CS}} \descript{Garfield HS Career and Technology Education Department | June 2016} \\
+
+\sectionsep
+\runsubsection{\large{WA State Honors Award}} \descript{Randy Dorn - State Superintendent of Public Instruction | June 2016} \\
+
+\sectionsep
+\runsubsection{\large{Outstanding Soloist - Honorable Mention}} \descript{Wynton Marsalis | May 2016} \\
+Awarded at the 2016 International Essentially Ellington Jazz Band Competition.\\
+\sectionsep
+\runsubsection{\large{Outstanding Soloist}} \descript{Wynton Marsalis | May 2015} \\
+Awarded at the 2015 International Essentially Ellington Jazz Band Competition.\\
+\sectionsep
+\ 
 \end{document}
