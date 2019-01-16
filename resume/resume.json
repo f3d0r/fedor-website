@@ -36,8 +36,8 @@
     {
       "location": "Seattle, WA - https://trya.space",
       "website": "",
-      "startDate": "Oct. 2015",
-      "endDate": "Present",
+      "startDate": "May 2018",
+      "endDate": "Nov. 2018",
       "highlights": [
         "Building an app/sensor infra. that uses live data to connect commuters to cheap, remote parking spots, using last-mile transit to get to destination.",
         "Created infrastructures for Machine-learning parking behavior, optimizing routes with parking vacancy variables, creating hardware sensors for detecting parking spot vacancy, built Android and iOS apps, and accompanying backend",
