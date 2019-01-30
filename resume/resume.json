@@ -41,8 +41,7 @@
       "highlights": [
         "Built an app/sensor infra. that uses live data to connect commuters to cheap, remote parking spots, using last-mile transit to get to destination.",
         "Created infrastructures for Machine-learning parking behavior, optimized routes with parking vacancy variables, created hardware sensors for detecting parking spot vacancy, built Android and iOS apps, and accompanying backend",
-        "Y Combinator W19 Interview Y Combinator 2018 Startup School (YC SS18)",
-        "Technologies used: node.js, Java, Swift, Lua, Arduino, Python, and HTML/CSS"
+        "Y Combinator W19 Interview and Y Combinator 2018 Startup School (YC SS18)"
       ],
       "company": "aspace, Inc.",
       "position": "Co-Founder/CEO"
@@ -147,6 +146,19 @@
       "name": "ssh.uno",
       "url": "https://ssh.uno",
       "description": "The fastest, simplest, most intuitive command-line experience yet."
+    },
+    {
+      "keywords": [
+        "node.js",
+        "Python",
+        "Java",
+        "Swift",
+        "OSRM Infrastructure",
+        "Lua",
+        "Arduino"
+      ],
+      "name": "aspace",
+      "url": "http://bit.ly/aspacerepo"
     },
     {
       "keywords": [
