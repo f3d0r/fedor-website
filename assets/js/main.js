@@ -1,3 +1,5 @@
+var documentReady = "";
+
 $(document).ready(function () {
     themeCheck();
     setInterval(themeCheck, 2000);
@@ -17,6 +19,14 @@ $(document).ready(function () {
     });
 });
 
+function scrollToSection(id) {
+    $("html, body").animate({
+            scrollTop: $("#" + id).offset().top
+        },
+        1000
+    );
+}
+
 function setup_progress_bar_animation() {
     var $animation_elements = $("[class*='a-']");
     var $window = $(window);
@@ -24,6 +34,7 @@ function setup_progress_bar_animation() {
     if (window.location.href.indexOf("#") != -1) {
         var url = window.location.href;
         var animateToId = url.substring(url.indexOf("#"), url.length);
+        console.log("ANIMATING: " + animateToId);
         try {
             $("html, body").animate({
                     scrollTop: $(animateToId).offset().top
