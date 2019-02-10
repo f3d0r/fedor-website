@@ -2,7 +2,7 @@ $(document).ready(function () {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://spotify.f3d0r.com/.netlify/functions/server/",
+        "url": "https://spotify.f3d0r.com/.netlify/functions/server",
         "method": "GET",
         "headers": {
             "Access-Control-Allow-Origin": "*",
