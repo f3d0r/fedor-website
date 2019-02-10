@@ -28,7 +28,7 @@ $(document).ready(function () {
                     }
                 }
                 contents += ". Listen to it <a href=" + response.item.external_urls.spotify + ">here</a>.";
-                $('.listeningto').html(`<body>${contents}</body>`);
+                $('.listeningto').html(`<body><br/><br/>${contents}</body>`);
             } else {
                 $('.listeningto').html("");
             }
