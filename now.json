@@ -1,0 +1,8 @@
+{
+    "version": 2,
+    "alias": ["fedor.me", "www.fedor.me"],
+    "builds": [{
+        "src": "*.html",
+        "use": "@now/html-minifier"
+    }]
+}
