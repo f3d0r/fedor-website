@@ -10,6 +10,14 @@ action "deploy" {
     secrets = ["ZEIT_TOKEN"]
 }
 
+# Always create an alias using the SHA
+action "alias" {
+    needs = "deploy"
+    uses = "actions/zeit-now@master"
+    args = "alias `cat /github/home/deploy.txt` $GITHUB_SHA"
+    secrets = ["ZEIT_TOKEN"]
+}
+
 # Add aliases
 action "release" {
     needs = "deploy"
