@@ -1,7 +1,6 @@
 {
-    "alias": ["fedor.me", "www.fedor.me"],
-    "builds": [
-        {
+    "alias": ["www.fedor.me"],
+    "builds": [{
             "src": "*.html",
             "use": "@now/html-minifier"
         },
@@ -30,14 +29,12 @@
     },
     "name": "fedor-website",
     "regions": ["all"],
-    "routes": [
-        {
-            "headers": {
-                "Location": "https://fedor.me/$1"
-            },
-            "src": "/(.*)",
-            "status": 301
-        }
-    ],
+    "routes": [{
+        "headers": {
+            "Location": "https://fedor.me/$1"
+        },
+        "src": "/(.*)",
+        "status": 301
+    }],
     "version": 2
 }
