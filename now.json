@@ -1,5 +1,6 @@
 {
     "version": 2,
+    "name": "fedor-website",
     "alias": ["fedor.me", "www.fedor.me"],
     "builds": [
         {
