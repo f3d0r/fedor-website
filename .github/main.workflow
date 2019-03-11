@@ -1,7 +1,6 @@
 workflow "Deploy to Now" {
     on = "push"
     resolves = [
-        "deploy",
         "deploy-redirects"
     ]
 }
