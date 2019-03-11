@@ -1,5 +1,5 @@
 {
-    "alias": ["www.fedor.me"],
+    "alias": ["fedor.me", "www.fedor.me"],
     "builds": [
         {
             "src": "*.html",
