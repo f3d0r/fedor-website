@@ -12,7 +12,6 @@ action "deploy" {
 
 # Add aliases
 action "release" {
-  needs = "master-branch-filter"
   uses = "actions/zeit-now@master"
   args = "alias --local-config=now.json"
   secrets = ["ZEIT_TOKEN"]
