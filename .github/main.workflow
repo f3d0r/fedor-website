@@ -1,11 +1,12 @@
 workflow "Deploy to Now" {
     on = "push"
     resolves = [
-        "Deploy"
+        "deploy",
+        "deploy-redirects"
     ]
 }
 
-action "deploy-main" {
+action "deploy" {
     uses = "actions/zeit-now@master"
     secrets = ["ZEIT_TOKEN"]
     args = "--local-config=now.json"
