@@ -12,7 +12,7 @@ action "deploy" {
 }
 
 action "deploy-redirects" {
-    needs = "deploy-main"
+    needs = "deploy"
     uses = "actions/zeit-now@master"
     secrets = ["ZEIT_TOKEN"]
     args = "--local-config=.redirects/now.json"
