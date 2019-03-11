@@ -1,12 +1,27 @@
 {
     "alias": ["fedor.me"],
-    "builds": [
-        {
+    "builds": [{
             "src": "*.html",
             "use": "@now/html-minifier"
         },
         {
+            "src": "assets/js/*.js",
+            "use": "@now/static"
+        },
+        {
             "src": "assets/css/*.css",
+            "use": "@now/static"
+        },
+        {
+            "src": "assets/favicons/*.png",
+            "use": "@now/static"
+        },
+        {
+            "src": "assets/images/header/*.jpg",
+            "use": "@now/static"
+        },
+        {
+            "src": "assets/images/portfolio/*.jpg",
             "use": "@now/static"
         },
         {
