@@ -1,6 +1,4 @@
 {
-    "version": 2,
-    "name": "fedor-website",
     "alias": ["fedor.me", "www.fedor.me"],
     "builds": [
         {
@@ -23,5 +21,14 @@
             "src": "sitemap.xml",
             "use": "@now/static"
         }
-    ]
+    ],
+    "github": {
+        "autoAlias": true,
+        "autoJobCancelation": true,
+        "enabled": true,
+        "silent": true
+    },
+    "name": "fedor-website",
+    "regions": ["all"],
+    "version": 2
 }
