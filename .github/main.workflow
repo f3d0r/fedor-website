@@ -20,7 +20,7 @@ action "alias" {
 
 # Add aliases
 action "release" {
-    needs = "deploy"
+    needs = "alias"
     uses = "actions/zeit-now@master"
     args = "alias --local-config=now.json"
     secrets = ["ZEIT_TOKEN"]
