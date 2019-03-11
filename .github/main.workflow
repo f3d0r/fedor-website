@@ -1,7 +1,7 @@
 workflow "Deploy to Now" {
     on = "push"
     resolves = [
-        "Alias"
+        "Deploy"
     ]
 }
 
