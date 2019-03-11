@@ -1,8 +1,26 @@
 {
     "version": 2,
     "alias": ["fedor.me", "www.fedor.me"],
-    "builds": [{
-        "src": "*.html",
-        "use": "@now/html-minifier"
-    }]
+    "builds": [
+        {
+            "src": "*.html",
+            "use": "@now/html-minifier"
+        },
+        {
+            "src": "assets/css/*.css",
+            "use": "@now/static"
+        },
+        {
+            "src": "resume.pdf",
+            "use": "@now/static"
+        },
+        {
+            "src": "robots.txt",
+            "use": "@now/static"
+        },
+        {
+            "src": "sitemap.xml",
+            "use": "@now/static"
+        }
+    ]
 }
