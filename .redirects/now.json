@@ -1,0 +1,13 @@
+{
+    "alias": ["www.fedor.me"],
+    "name": "fedor-website-redirect",
+    "regions": ["all"],
+    "routes": [{
+        "headers": {
+            "Location": "https://fedor.me/$1"
+        },
+        "src": "/(.*)",
+        "status": 301
+    }],
+    "version": 2
+}
