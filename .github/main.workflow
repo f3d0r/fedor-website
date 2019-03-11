@@ -11,7 +11,7 @@ action "deploy-main" {
     args = "--local-config=now.json"
 }
 
-action "Deploy-redirects" {
+action "deploy-redirects" {
     needs = "deploy-main"
     uses = "actions/zeit-now@master"
     secrets = ["ZEIT_TOKEN"]
