@@ -2,7 +2,7 @@
     "alias": ["fedor.me", "f3d0r.com"],
     "builds": [{
             "src": "*.html",
-            "use": "@now/html-minifier"
+            "use": "@now/static"
         },
         {
             "src": "assets/js/*.js",
