@@ -1,0 +1,11 @@
+{
+  "editor.detectIndentation": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": false,
+  "editor.codeActionsOnSaveTimeout": 10000,
+  "editor.formatOnSave": true,
+  "javascript.format.enable": false,
+}
