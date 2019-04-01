@@ -1,5 +1,5 @@
 {
-    "alias": ["fedor.me", "f3d0r.com"],
+    "alias": ["fedor.me", "f3d0r.com", "f3d0r.me"],
     "builds": [{
             "src": "*.html",
             "use": "@now/static"
