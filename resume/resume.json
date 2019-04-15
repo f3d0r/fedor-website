@@ -1,81 +1,81 @@
 {
   "selectedTemplate": 4,
   "headings": {
-    "skills": "",
-    "projects": "",
     "awards": "",
-    "education": "Education"
+    "education": "Education",
+    "projects": "",
+    "skills": ""
   },
   "basics": {
-    "name": "Fedor Paretsky",
     "email": "me@f3d0r.com",
-    "phone": "(206) 372-8476",
-    "website": "f3d0r.com",
     "location": {
       "address": "Seattle, WA"
-    }
+    },
+    "name": "Fedor Paretsky",
+    "phone": "(206) 372-8476",
+    "website": "f3d0r.com"
   },
   "education": [
     {
-      "institution": "University of Washington",
       "area": "Applied Physics and Mathematics",
-      "studyType": "BS",
       "endDate": "Jun. 2020",
+      "institution": "University of Washington",
       "location": "Seattle, WA",
-      "startDate": "Sep. 2016"
+      "startDate": "Sep. 2016",
+      "studyType": "BS"
     },
     {
+      "endDate": "Jun. 2016",
       "institution": "Garfield High School",
       "location": "Seattle, WA",
-      "studyType": "High School Degree",
       "startDate": "Sep. 2012",
-      "endDate": "Jun. 2016"
+      "studyType": "High School Degree"
     }
   ],
   "work": [
     {
-      "location": "trya.space - Seattle, WA",
-      "website": "",
-      "startDate": "May 2018",
+      "company": "aspace, Inc.",
       "endDate": "Nov. 2018",
       "highlights": [
         "Built an app/sensor infra. that uses live data to connect commuters to cheap, remote parking spots, using last-mile transit to get to destination.",
         "Created infrastructures for Machine-learning parking behavior, optimized routes with parking vacancy variables, created hardware sensors for detecting parking spot vacancy, built Android and iOS apps, and accompanying backend",
         "Y Combinator W19 Interview and Y Combinator 2018 Startup School (YC SS18)"
       ],
-      "company": "aspace, Inc.",
-      "position": "Co-Founder/CEO"
+      "location": "trya.space - Seattle, WA",
+      "position": "Co-Founder/CEO",
+      "startDate": "May 2018",
+      "website": ""
     },
     {
+      "company": "srnd.org (StudentRND)",
+      "endDate": "Present",
       "highlights": [
         "A StudentRND Code Evangelist® goes out into the world to spread a love of code with StudentRND, a non-profit getting students excited and involved in CS. Code Evangelists are day-of coordinators, assisting with various event logistics."
       ],
-      "position": "Code Evangelist®",
-      "company": "srnd.org (StudentRND)",
       "location": "srnd.org - U.S.A.",
-      "startDate": "May 2016",
-      "endDate": "Present"
+      "position": "Code Evangelist®",
+      "startDate": "May 2016"
     },
     {
+      "company": "University of Washington Housing & Food Services",
+      "endDate": "Mar. 2018",
       "highlights": [
         "Resident Advisors (RAs) work in the UW residence halls to establish a cohesive and responsible community in their designated area, model and support issues related to diversity, and refer, advise, and support residents."
       ],
-      "position": "Resident Advisor (RA)",
-      "company": "University of Washington Housing & Food Services",
       "location": "Seattle, WA",
-      "startDate": "Sep. 2017",
-      "endDate": "Mar. 2018"
+      "position": "Resident Advisor (RA)",
+      "startDate": "Sep. 2017"
     },
     {
+      "company": "Metrix:Create Space",
+      "endDate": "Sep. 2016",
       "highlights": [
         "Maintained hacker space and repaired/refurbished professional/industrial-grade machinery",
         "Technologies used: Large- and small-scale 3D printers, industrial laser cutters and PCB printers, CNCs"
       ],
-      "position": "Lead Intern",
-      "company": "Metrix:Create Space",
       "location": "metrixcreatespace.com - Seattle, WA",
-      "startDate": "Feb. 2016",
-      "endDate": "Sep. 2016"
+      "position": "Lead Intern",
+      "startDate": "Feb. 2016"
     },
     {
       "highlights": [
@@ -85,7 +85,6 @@
   ],
   "skills": [
     {
-      "level": "",
       "keywords": [
         "Java",
         "Python",
@@ -95,6 +94,7 @@
         "Arduino",
         "Lua"
       ],
+      "level": "",
       "name": "Programming Languages"
     },
     {
@@ -138,14 +138,28 @@
       ]
     },
     {
+      "description": "Controls and Powers on the UW Hyperloop Team (for SpaceX Hyperloop Competition).",
+      "keywords": [
+        "TypeScript",
+        "Ballerina",
+        "Drone",
+        "Arduino",
+        "C++",
+        "Go",
+        "Python"
+      ],
+      "name": "UW Hyperloop",
+      "url": "https://hyperloop.io"
+    },
+    {
+      "description": "The fastest, simplest, most intuitive command-line experience yet.",
       "keywords": [
         "node.js (Electron.js)",
         "HTML/CSS/JavaScript",
         "SH"
       ],
       "name": "ssh.uno",
-      "url": "https://ssh.uno",
-      "description": "The fastest, simplest, most intuitive command-line experience yet."
+      "url": "https://ssh.uno"
     },
     {
       "keywords": [
@@ -161,59 +175,26 @@
       "url": "http://bit.ly/aspacerepo"
     },
     {
+      "description": "A HQ Trivia Bot, for educational purposes only.",
       "keywords": [
         "Swift",
         "RESTful APIs"
       ],
       "name": "HQ Trivia Bot",
-      "description": "A HQ Trivia Bot, for educational purposes only.",
       "url": "https://github.com/f3d0r/triviabot"
     },
     {
-      "keywords": [
-        "HTML/CSS/JS",
-        "node.js",
-        "Google Cloud Natural Language"
-      ],
-      "name": "PrivaC",
-      "description": "A Chrome extension that highlights important parts of a Terms of Service page using NLP.",
-      "url": "http://bit.ly/privacextension"
-    },
-    {
+      "description": "A Scratch-like interface for creating Keras applications.",
       "keywords": [
         "HTML/CSS/JS",
         "Python/Keras",
         "node.js"
       ],
       "name": "Deep Learning Playground",
-      "description": "A Scratch-like interface for creating Keras applications.",
       "url": "http://bit.ly/dlplayground"
     }
   ],
-  "awards": [
-    {
-      "date": "June 2016",
-      "title": "Garfield HS Certificate of Excellence in Business Technology and CS",
-      "awarder": "Garfield HS Career and Technology Education Department"
-    },
-    {
-      "title": "WA State Honors Award",
-      "date": "June 2016",
-      "awarder": "Randy Dorn - State Superintendent of Public Instruction"
-    },
-    {
-      "title": "Outstanding Soloist - Honorable Mention",
-      "awarder": "Wynton Marsalis",
-      "date": "May 2016",
-      "summary": "Awarded at the 2016 International Essentially Ellington Jazz Band Competition."
-    },
-    {
-      "title": "Outstanding Soloist",
-      "date": "May 2015",
-      "awarder": "Wynton Marsalis",
-      "summary": "Awarded at the 2015 International Essentially Ellington Jazz Band Competition."
-    }
-  ],
+  "awards": [],
   "sections": [
     "templates",
     "profile",
