@@ -1,11 +1,5 @@
 {
-  "selectedTemplate": 4,
-  "headings": {
-    "awards": "",
-    "education": "Education",
-    "projects": "",
-    "skills": ""
-  },
+  "awards": [],
   "basics": {
     "email": "me@f3d0r.com",
     "location": {
@@ -15,8 +9,7 @@
     "phone": "(206) 372-8476",
     "website": "f3d0r.com"
   },
-  "education": [
-    {
+  "education": [{
       "area": "Applied Physics and Mathematics",
       "endDate": "Jun. 2020",
       "institution": "University of Washington",
@@ -32,107 +25,13 @@
       "studyType": "High School Degree"
     }
   ],
-  "work": [
-    {
-      "company": "aspace, Inc.",
-      "endDate": "Nov. 2018",
-      "highlights": [
-        "Built an app/sensor infra. that uses live data to connect commuters to cheap, remote parking spots, using last-mile transit to get to destination.",
-        "Created infrastructures for Machine-learning parking behavior, optimized routes with parking vacancy variables, created hardware sensors for detecting parking spot vacancy, built Android and iOS apps, and accompanying backend",
-        "Y Combinator W19 Interview and Y Combinator 2018 Startup School (YC SS18)"
-      ],
-      "location": "trya.space - Seattle, WA",
-      "position": "Co-Founder/CEO",
-      "startDate": "May 2018",
-      "website": ""
-    },
-    {
-      "company": "srnd.org (StudentRND)",
-      "endDate": "Present",
-      "highlights": [
-        "A StudentRND Code Evangelist® goes out into the world to spread a love of code with StudentRND, a non-profit getting students excited and involved in CS. Code Evangelists are day-of coordinators, assisting with various event logistics."
-      ],
-      "location": "srnd.org - U.S.A.",
-      "position": "Code Evangelist®",
-      "startDate": "May 2016"
-    },
-    {
-      "company": "University of Washington Housing & Food Services",
-      "endDate": "Mar. 2018",
-      "highlights": [
-        "Resident Advisors (RAs) work in the UW residence halls to establish a cohesive and responsible community in their designated area, model and support issues related to diversity, and refer, advise, and support residents."
-      ],
-      "location": "Seattle, WA",
-      "position": "Resident Advisor (RA)",
-      "startDate": "Sep. 2017"
-    },
-    {
-      "company": "Metrix:Create Space",
-      "endDate": "Sep. 2016",
-      "highlights": [
-        "Maintained hacker space and repaired/refurbished professional/industrial-grade machinery",
-        "Technologies used: Large- and small-scale 3D printers, industrial laser cutters and PCB printers, CNCs"
-      ],
-      "location": "metrixcreatespace.com - Seattle, WA",
-      "position": "Lead Intern",
-      "startDate": "Feb. 2016"
-    },
-    {
-      "highlights": [
-        ""
-      ]
-    }
-  ],
-  "skills": [
-    {
-      "keywords": [
-        "Java",
-        "Python",
-        "JavaScript",
-        "HTML/CSS",
-        "node.js",
-        "Arduino",
-        "Lua"
-      ],
-      "level": "",
-      "name": "Programming Languages"
-    },
-    {
-      "keywords": [
-        "Nginx",
-        "Apache",
-        "Express",
-        "web.py"
-      ],
-      "name": "Web Frameworks"
-    },
-    {
-      "keywords": [
-        "MySQL",
-        "NoSQL",
-        "Realm",
-        "Firebase"
-      ],
-      "name": "Databases"
-    },
-    {
-      "keywords": [
-        "DigitalOcean",
-        "Amazon Web Services",
-        "Google Cloud Platform"
-      ],
-      "name": "Cloud Computing Platforms"
-    },
-    {
-      "keywords": [
-        "Android (Java)",
-        "iOS (Swift)"
-      ],
-      "name": "Mobile Development"
-    }
-  ],
-  "projects": [
-    {
+  "headings": {
+    "awards": "",
+    "education": "Education",
+    "projects": "",
+    "skills": ""
+  },
+  "projects": [{
       "keywords": [
         null
       ]
@@ -194,7 +93,6 @@
       "url": "http://bit.ly/dlplayground"
     }
   ],
-  "awards": [],
   "sections": [
     "templates",
     "profile",
@@ -203,5 +101,103 @@
     "skills",
     "projects",
     "awards"
+  ],
+  "selectedTemplate": 4,
+  "skills": [{
+      "keywords": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "node.js",
+        "Arduino",
+        "Lua"
+      ],
+      "level": "",
+      "name": "Programming Languages"
+    },
+    {
+      "keywords": [
+        "Nginx",
+        "Apache",
+        "Express",
+        "web.py"
+      ],
+      "name": "Web Frameworks"
+    },
+    {
+      "keywords": [
+        "MySQL",
+        "NoSQL",
+        "Realm",
+        "Firebase"
+      ],
+      "name": "Databases"
+    },
+    {
+      "keywords": [
+        "DigitalOcean",
+        "Amazon Web Services",
+        "Google Cloud Platform"
+      ],
+      "name": "Cloud Computing Platforms"
+    },
+    {
+      "keywords": [
+        "Android (Java)",
+        "iOS (Swift)"
+      ],
+      "name": "Mobile Development"
+    }
+  ],
+  "work": [{
+      "company": "aspace, Inc.",
+      "endDate": "Nov. 2018",
+      "highlights": [
+        "Built an app/sensor infra. that uses live data to connect commuters to cheap, remote parking spots, using last-mile transit to get to destination.",
+        "Created infrastructures for Machine-learning parking behavior, optimized routes with parking vacancy variables, created hardware sensors for detecting parking spot vacancy, built Android and iOS apps, and accompanying backend",
+        "Y Combinator W19 Interview and Y Combinator 2018 Startup School (YC SS18)"
+      ],
+      "location": "trya.space - Seattle, WA",
+      "position": "Co-Founder/CEO",
+      "startDate": "May 2018",
+      "website": ""
+    },
+    {
+      "company": "srnd.org (StudentRND)",
+      "endDate": "Present",
+      "highlights": [
+        "A StudentRND Code Evangelist® goes out into the world to spread a love of code with StudentRND, a non-profit getting students excited and involved in CS. Code Evangelists are day-of coordinators, assisting with various event logistics."
+      ],
+      "location": "srnd.org - U.S.A.",
+      "position": "Code Evangelist®",
+      "startDate": "May 2016"
+    },
+    {
+      "company": "University of Washington Housing & Food Services",
+      "endDate": "Mar. 2018",
+      "highlights": [
+        "Resident Advisors (RAs) work in the UW residence halls to establish a cohesive and responsible community in their designated area, model and support issues related to diversity, and refer, advise, and support residents."
+      ],
+      "location": "Seattle, WA",
+      "position": "Resident Advisor (RA)",
+      "startDate": "Sep. 2017"
+    },
+    {
+      "company": "Metrix:Create Space",
+      "endDate": "Sep. 2016",
+      "highlights": [
+        "Maintained hacker space and repaired/refurbished professional/industrial-grade machinery",
+        "Technologies used: Large- and small-scale 3D printers, industrial laser cutters and PCB printers, CNCs"
+      ],
+      "location": "metrixcreatespace.com - Seattle, WA",
+      "position": "Lead Intern",
+      "startDate": "Feb. 2016"
+    },
+    {
+      "highlights": [
+        ""
+      ]
+    }
   ]
 }
