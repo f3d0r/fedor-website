@@ -3,4 +3,4 @@ Disallow:
 Allow: /
 Allow: /sitemap.xml
 Allow: /resume.pdf
-Sitemap: https://f3d0r.com/sitemap.xml
+Sitemap: https://fedor.me/sitemap.xml

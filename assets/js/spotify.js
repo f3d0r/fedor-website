@@ -2,13 +2,13 @@ $(document).ready(function () {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://spotify.f3d0r.com/",
-        "method": "GET",
         "headers": {
             "Access-Control-Allow-Origin": "*",
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Cache-Control": "no-cache"
-        }
+            "Cache-Control": "no-cache",
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "method": "GET",
+        "url": "https://spotify.fedor.me/"
     };
 
     setInterval(function () {
