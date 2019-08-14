@@ -9,7 +9,8 @@
     "phone": "(206) 372-8476",
     "website": "fedor.me"
   },
-  "education": [{
+  "education": [
+    {
       "area": "Applied Physics and Mathematics",
       "endDate": "Jun. 2020",
       "institution": "University of Washington",
@@ -31,13 +32,12 @@
     "projects": "",
     "skills": ""
   },
-  "projects": [{
-      "keywords": [
-        null
-      ]
+  "projects": [
+    {
+      "keywords": [null]
     },
     {
-      "description": "Controls and Powers on the UW Hyperloop Team (for SpaceX Hyperloop Competition).",
+      "description": "Controls and Powers on the UW Hyperloop Competition Team (participated in 2019 SpaceX Pod Competition).",
       "keywords": [
         "TypeScript",
         "Ballerina",
@@ -52,11 +52,7 @@
     },
     {
       "description": "The fastest, simplest, most intuitive command-line experience yet.",
-      "keywords": [
-        "node.js (Electron.js)",
-        "HTML/CSS/JavaScript",
-        "SH"
-      ],
+      "keywords": ["node.js (Electron.js)", "HTML/CSS/JavaScript", "SH"],
       "name": "ssh.uno",
       "url": "https://ssh.uno"
     },
@@ -75,20 +71,13 @@
     },
     {
       "description": "A HQ Trivia Bot, for educational purposes only.",
-      "keywords": [
-        "Swift",
-        "RESTful APIs"
-      ],
+      "keywords": ["Swift", "RESTful APIs"],
       "name": "HQ Trivia Bot",
       "url": "https://github.com/f3d0r/triviabot"
     },
     {
       "description": "A Scratch-like interface for creating Keras applications.",
-      "keywords": [
-        "HTML/CSS/JS",
-        "Python/Keras",
-        "node.js"
-      ],
+      "keywords": ["HTML/CSS/JS", "Python/Keras", "node.js"],
       "name": "Deep Learning Playground",
       "url": "http://bit.ly/dlplayground"
     }
@@ -103,7 +92,8 @@
     "awards"
   ],
   "selectedTemplate": 4,
-  "skills": [{
+  "skills": [
+    {
       "keywords": [
         "Java",
         "Python",
@@ -117,21 +107,11 @@
       "name": "Programming Languages"
     },
     {
-      "keywords": [
-        "Nginx",
-        "Apache",
-        "Express",
-        "web.py"
-      ],
+      "keywords": ["Nginx", "Apache", "Express", "web.py"],
       "name": "Web Frameworks"
     },
     {
-      "keywords": [
-        "MySQL",
-        "NoSQL",
-        "Realm",
-        "Firebase"
-      ],
+      "keywords": ["MySQL", "NoSQL", "Realm", "Firebase"],
       "name": "Databases"
     },
     {
@@ -143,14 +123,24 @@
       "name": "Cloud Computing Platforms"
     },
     {
-      "keywords": [
-        "Android (Java)",
-        "iOS (Swift)"
-      ],
+      "keywords": ["Android (Java)", "iOS (Swift)"],
       "name": "Mobile Development"
     }
   ],
-  "work": [{
+  "work": [
+    {
+      "company": "Newfront Insurance",
+      "endDate": "Present",
+      "highlights": [
+        "Working with modern TypeScript, Go, Next.js, and Heroku technologies",
+        "Converting backend and frontend interfacing technologies to Apollo GraphQL"
+      ],
+      "location": "newfrontinsurance.com - San Francisco, CA",
+      "position": "SWE Intern",
+      "startDate": "Jun. 2019",
+      "website": ""
+    },
+    {
       "company": "aspace, Inc.",
       "endDate": "Nov. 2018",
       "highlights": [
@@ -165,7 +155,7 @@
     },
     {
       "company": "srnd.org (StudentRND)",
-      "endDate": "Present",
+      "endDate": "Nov. 2018",
       "highlights": [
         "A StudentRND Code Evangelist® goes out into the world to spread a love of code with StudentRND, a non-profit getting students excited and involved in CS. Code Evangelists are day-of coordinators, assisting with various event logistics."
       ],
@@ -195,9 +185,7 @@
       "startDate": "Feb. 2016"
     },
     {
-      "highlights": [
-        ""
-      ]
+      "highlights": [""]
     }
   ]
 }
